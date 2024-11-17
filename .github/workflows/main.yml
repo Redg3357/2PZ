@@ -19,7 +19,6 @@ jobs:
             uses: microsoft/setup-msbuild@v2
                      
           - name: Build solution
-            run: msbuild 2PZ.sln /p:Configuration=Release
-
+            run: msbuild 2PZ.sln /p:Configuration=Release 
           #- name: Check MSBuild version
-          #  run: msbuild -version 
+          -  run:  x64/Release/2PZTEST.exe
