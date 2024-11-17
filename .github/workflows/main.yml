@@ -12,5 +12,13 @@ jobs:
     test_job:
         runs-on: windows-latest
         steps:
-          - name: Build
-            run: env
+          - name: Checkout code
+            uses: actions/checkout@v3
+
+          - name: Set up MSBuild
+            uses: microsoft/setup-msbuild@v1
+                     
+          - name: Build solution
+            uses: msbuild 2PZ.sln /p:Configuration=Release
+
+            
