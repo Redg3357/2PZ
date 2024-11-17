@@ -1,11 +1,25 @@
 ﻿// 2PZ.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 #include <iostream>
+#include "calculator.h"
 
-int main()
-{
-    std::cout << "Hello World!\n";
+
+int main() {
+    int a = 0;
+    int b = 0;
+;
+    std::cout << "Enter first number: ";
+    std::cin >> a;
+    std::cout << "Enter second number: ";
+    std::cin >> b;
+   
+    std::cout << " '+' " << operations::add(a, b) << "\n";
+    std::cout << " '/' " << operations::divide(a, b) << "\n";
+    std::cout << " '*' " << operations::multiply(a, b) << "\n";
+    std::cout << " '-' " << operations::subtract(a, b) << "\n";
+
+
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
