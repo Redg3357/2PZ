@@ -10,6 +10,7 @@ on:
 
 jobs:
     test_job:
-      runs-on: windows-latest
+        runs-on: windows-latest
         steps:
-          uses: actions/checkout@v1
+          - name: Build
+            run: env
