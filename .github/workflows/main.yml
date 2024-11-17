@@ -16,13 +16,11 @@ jobs:
             uses: actions/checkout@v3
 
           
-          #- name: Set up MSBuild
-          #  uses: microsoft/setup-msbuild@v1
+          - name: setup-msbuild  
+            uses: microsoft/setup-msbuild@v2
                      
           - name: Build solution
             uses: msbuild 2PZ.sln /p:Configuration=Release
 
           #- name: Check MSBuild version
-          #  run: msbuild -version
-      
-            
+          #  run: msbuild -version 
