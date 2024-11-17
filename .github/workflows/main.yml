@@ -22,7 +22,7 @@ jobs:
           - name: Build solution
             uses: msbuild 2PZ.sln /p:Configuration=Release
 
-          - name: Check MSBuild version
-            run: msbuild -version
+          #- name: Check MSBuild version
+          #  run: msbuild -version
       
             
