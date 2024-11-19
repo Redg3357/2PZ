@@ -130,7 +130,6 @@
   <ItemGroup>
     <ClCompile Include="2PZ.cpp" />
     <ClCompile Include="calculator.cpp" />
-    <ClCompile Include="test_calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calculator.h" />
