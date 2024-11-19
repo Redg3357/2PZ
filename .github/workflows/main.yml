@@ -27,7 +27,7 @@ jobs:
           - name: Create and merge pull request
             if: success()
             env:
-              GH_TOKEN: ${{ secrets.GH_TOKEN }}
+              GH_TOKEN: ${{ secrets.TOKEN }}
             run: |
               # Set variables
               $BASE_BRANCH = "main"
