@@ -25,4 +25,5 @@ TEST(CalculatorTests, Divide) {
 TEST(CalculatorTests, Xor) {
     EXPECT_EQ(operations::dec_xor(10, 10), 0);
     EXPECT_EQ(operations::dec_xor(107, 63), 84);
+    EXPECT_EQ(operations::dec_xor(11, 10), 1);
 }
