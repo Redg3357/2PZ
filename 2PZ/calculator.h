@@ -6,6 +6,7 @@ namespace operations {
 	int subtract(int a, int b);
 	int multiply(int a, int b);
 	int divide(int a, int b);
+	int dec_xor(int a, int b);
 
 }
 

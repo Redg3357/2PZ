@@ -17,6 +17,7 @@ int main() {
     std::cout << " '/' " << operations::divide(a, b) << "\n";
     std::cout << " '*' " << operations::multiply(a, b) << "\n";
     std::cout << " '-' " << operations::subtract(a, b) << "\n";
+    std::cout << " 'xor' " << operations::dec_xor(a, b) << "\n";
 
 
     return 0;
