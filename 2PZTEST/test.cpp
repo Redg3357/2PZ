@@ -15,6 +15,7 @@ TEST(CalculatorTests, Subtract) {
 TEST(CalculatorTests, Multiply) {
     EXPECT_EQ(operations::multiply(4, 3), 12);
     EXPECT_EQ(operations::multiply(-2, 2), -4);
+    EXPECT_EQ(operations::multiply(2, 2), 4);
 }
 
 TEST(CalculatorTests, Divide) {

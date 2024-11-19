@@ -30,24 +30,27 @@ jobs:
               GH_TOKEN: ${{ secrets.GH_TOKEN }}
             run: |
               # Set variables
-              BASE_BRANCH="main"
-              HEAD_BRANCH="development"
-              PR_TITLE="Auto-merge from development to main"
-              PR_BODY="This pull request was automatically created and merged by GitHub Actions."
-              
+              $BASE_BRANCH = "main"
+              $HEAD_BRANCH = "development"
+              $PR_TITLE = "Auto-merge from development to main"
+              $PR_BODY = "This pull request was automatically created and merged by GitHub Actions."
+
               # Create pull request
-              PR_RESPONSE=$(curl -s -X POST \
-                -H "Authorization: token $GH_TOKEN" \
-                -H "Accept: application/vnd.github.v3+json" \
-                https://api.github.com/repos/${{ github.repository }}/pulls \
-                -d "{\"title\":\"$PR_TITLE\",\"body\":\"$PR_BODY\",\"head\":\"$HEAD_BRANCH\",\"base\":\"$BASE_BRANCH\"}")
-              
+              $PR_RESPONSE = Invoke-RestMethod -Uri "https://api.github.com/repos/${{ github.repository }}/pulls" `
+                -Method POST `
+                -Headers @{ Authorization = "token $env:GH_TOKEN"; Accept = "application/vnd.github.v3+json" } `
+                -Body (ConvertTo-Json -Depth 10 -Compress @{
+                    title = $PR_TITLE
+                    body = $PR_BODY
+                    head = $HEAD_BRANCH
+                    base = $BASE_BRANCH
+                })
+
               # Extract pull request number
-              PR_NUMBER=$(echo "$PR_RESPONSE" | jq -r .number)
-              
+              $PR_NUMBER = $PR_RESPONSE.number
+
               # Merge pull request
-              curl -s -X PUT \
-                -H "Authorization: token $GH_TOKEN" \
-                -H "Accept: application/vnd.github.v3+json" \
-                https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER/merge \
-                -d "{\"merge_method\":\"merge\"}"
+              Invoke-RestMethod -Uri "https://api.github.com/repos/${{ github.repository }}/pulls/$PR_NUMBER/merge" `
+                -Method PUT `
+                -Headers @{ Authorization = "token $env:GH_TOKEN"; Accept = "application/vnd.github.v3+json" } `
+                -Body (ConvertTo-Json -Depth 10 -Compress @{ merge_method = "merge" })
