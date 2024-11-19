@@ -36,7 +36,7 @@ jobs:
               $PR_BODY = "This pull request was automatically created and merged by GitHub Actions."
 
               # Create pull request
-              $PR_RESPONSE = Invoke-RestMethod -Uri "https://api.github.com/repos/${{ github.repository }}/pulls" `
+              $PR_RESPONSE = Invoke-RestMethod -Uri "https://api.github.com/repos/Redg3357/2PZ/pulls" `
                 -Method POST `
                 -Headers @{ Authorization = "token $env:GH_TOKEN"; Accept = "application/vnd.github.v3+json" } `
                 -Body (ConvertTo-Json -Depth 10 -Compress @{
