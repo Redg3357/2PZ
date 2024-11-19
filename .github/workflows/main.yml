@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - main
+    - development
   
   pull_request:
     branches:
@@ -22,3 +23,4 @@ jobs:
             run: msbuild 2PZ.sln -target:2PZ,2PZTEST  
           #- name: Check MSBuild version
           -  run:  ./x64/Release/2PZTEST.exe
+          
