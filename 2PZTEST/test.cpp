@@ -10,6 +10,7 @@ TEST(CalculatorTests, Add) {
 TEST(CalculatorTests, Subtract) {
     EXPECT_EQ(operations::subtract(5, 3), 2);
     EXPECT_EQ(operations::subtract(-1, -1), 0);
+    EXPECT_EQ(operations::subtract(0, 0), 0);
 }
 
 TEST(CalculatorTests, Multiply) {
