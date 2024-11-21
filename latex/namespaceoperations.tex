@@ -1,0 +1,131 @@
+\doxysection{operations Namespace Reference}
+\hypertarget{namespaceoperations}{}\label{namespaceoperations}\index{operations@{operations}}
+
+
+Namespace containing basic arithmetic and bitwise operations.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceoperations_ad6443b791f5b5509e2c382fdcc5c6f14}{add}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Adds two integers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceoperations_a9eb12e63a94f77d76f4e4b0be2e72eb0}{subtract}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Subtracts the second integer from the first. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceoperations_a1a8715ba63c7772340f709b18a5ad576}{multiply}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Multiplies two integers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceoperations_accff4816cf7351594461de2cc90079d7}{divide}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Divides the first integer by the second. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceoperations_a32a517a5074ceb3b56a49a4cc540fb6c}{dec\+\_\+xor}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em Performs a bitwise XOR operation and decrements the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Namespace containing basic arithmetic and bitwise operations. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceoperations_ad6443b791f5b5509e2c382fdcc5c6f14}\index{operations@{operations}!add@{add}}
+\index{add@{add}!operations@{operations}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{namespaceoperations_ad6443b791f5b5509e2c382fdcc5c6f14} 
+int operations\+::add (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Adds two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first integer. \\
+\hline
+{\em b} & The second integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sum of {\ttfamily a} and {\ttfamily b}. 
+\end{DoxyReturn}
+\Hypertarget{namespaceoperations_a32a517a5074ceb3b56a49a4cc540fb6c}\index{operations@{operations}!dec\_xor@{dec\_xor}}
+\index{dec\_xor@{dec\_xor}!operations@{operations}}
+\doxysubsubsection{\texorpdfstring{dec\_xor()}{dec\_xor()}}
+{\footnotesize\ttfamily \label{namespaceoperations_a32a517a5074ceb3b56a49a4cc540fb6c} 
+int operations\+::dec\+\_\+xor (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Performs a bitwise XOR operation and decrements the result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first integer. \\
+\hline
+{\em b} & The second integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of {\ttfamily (a \texorpdfstring{$^\wedge$}{\string^} b) -\/ 1}. 
+\end{DoxyReturn}
+\Hypertarget{namespaceoperations_accff4816cf7351594461de2cc90079d7}\index{operations@{operations}!divide@{divide}}
+\index{divide@{divide}!operations@{operations}}
+\doxysubsubsection{\texorpdfstring{divide()}{divide()}}
+{\footnotesize\ttfamily \label{namespaceoperations_accff4816cf7351594461de2cc90079d7} 
+int operations\+::divide (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Divides the first integer by the second. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The numerator. \\
+\hline
+{\em b} & The denominator. Must not be zero. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of {\ttfamily a / b}. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if {\ttfamily b} is zero. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{namespaceoperations_a1a8715ba63c7772340f709b18a5ad576}\index{operations@{operations}!multiply@{multiply}}
+\index{multiply@{multiply}!operations@{operations}}
+\doxysubsubsection{\texorpdfstring{multiply()}{multiply()}}
+{\footnotesize\ttfamily \label{namespaceoperations_a1a8715ba63c7772340f709b18a5ad576} 
+int operations\+::multiply (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Multiplies two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first integer. \\
+\hline
+{\em b} & The second integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The product of {\ttfamily a} and {\ttfamily b}. 
+\end{DoxyReturn}
+\Hypertarget{namespaceoperations_a9eb12e63a94f77d76f4e4b0be2e72eb0}\index{operations@{operations}!subtract@{subtract}}
+\index{subtract@{subtract}!operations@{operations}}
+\doxysubsubsection{\texorpdfstring{subtract()}{subtract()}}
+{\footnotesize\ttfamily \label{namespaceoperations_a9eb12e63a94f77d76f4e4b0be2e72eb0} 
+int operations\+::subtract (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Subtracts the second integer from the first. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first integer. \\
+\hline
+{\em b} & The second integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of {\ttfamily a -\/ b}. 
+\end{DoxyReturn}
