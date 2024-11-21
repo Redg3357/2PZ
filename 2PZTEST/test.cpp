@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "../2PZ/calculator.cpp"
 
-
+//гугл тестики
 TEST(CalculatorTests, Add) {
     EXPECT_EQ(operations::add(2, 3), 5);
     EXPECT_EQ(operations::add(-1, 1), 0);
